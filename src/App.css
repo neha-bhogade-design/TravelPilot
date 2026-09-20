@@ -1,0 +1,1020 @@
+/* =========================
+   TRAVELPILOT GLOBAL
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #302820;
+  background: #f6ead9;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f6ead9;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f6ead9;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 84px;
+  padding: 0 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9cbb9;
+  background: #f6ead9;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #302820;
+}
+
+.compass {
+  color: #d64c32;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.navbar nav button {
+  border: 0;
+  background: transparent;
+  color: #6d5d4f;
+  padding: 12px 14px;
+  font-size: 14px;
+  letter-spacing: .02em;
+}
+
+.navbar nav button:hover,
+.navbar nav .nav-active {
+  color: #302820;
+}
+
+.user-icon {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  border: 1.5px solid #302820;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
+
+/* =========================
+   SETUP PAGE
+========================= */
+
+.hero {
+  width: min(1100px, 89%);
+  margin: 58px auto 40px;
+}
+
+.step-label,
+.mini-label,
+.screen .step-label {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: #96745d;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 18px 0 14px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(54px, 7vw, 88px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+.hero h1 span,
+.screen-title span,
+.plan-heading h1 span {
+  background: #f3c747;
+  padding: 0 12px 5px;
+  font-style: italic;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #705f51;
+}
+
+.setup-content {
+  width: min(1100px, 89%);
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 75px;
+}
+
+.setup-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: .13em;
+  color: #9b735c;
+}
+
+.large-input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1.5px solid #382d25;
+  outline: none;
+  background: transparent;
+  padding: 8px 0 13px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 31px;
+  color: #302820;
+}
+
+.trip-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 38px;
+  margin-top: 36px;
+}
+
+.trip-details input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1.5px solid #302820;
+  outline: none;
+  background: transparent;
+  padding: 5px 0 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  color: #302820;
+}
+
+.travellers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1.5px solid #302820;
+  padding-bottom: 8px;
+}
+
+.travellers button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #302820;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 22px;
+  color: #302820;
+}
+
+.travellers strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+/* =========================
+   BUDGET / INTERESTS / PACE
+========================= */
+
+.budget-section,
+.interest-section,
+.pace-section,
+.notes-section {
+  margin-top: 42px;
+}
+
+.budget-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.budget-heading span {
+  color: #8e6652;
+  font-size: 14px;
+}
+
+.budget-slider {
+  width: 100%;
+  margin: 12px 0 4px;
+  accent-color: #d65a3b;
+}
+
+.budget-range {
+  display: flex;
+  justify-content: space-between;
+  color: #9b8777;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.chip {
+  border: 1px solid #c9b6a2;
+  border-radius: 30px;
+  background: transparent;
+  color: #655447;
+  padding: 9px 16px;
+  transition: .2s;
+}
+
+.chip:hover,
+.chip.selected {
+  border-color: #302820;
+  background: #302820;
+  color: #f8eddf;
+}
+
+.pace-buttons {
+  display: flex;
+  gap: 9px;
+}
+
+.pace-buttons button {
+  border: 1px solid #c9b6a2;
+  background: transparent;
+  padding: 10px 20px;
+  color: #655447;
+}
+
+.pace-buttons button.active {
+  background: #302820;
+  color: #fff7ec;
+  border-color: #302820;
+}
+
+.notes-input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #9c8877;
+  outline: none;
+  background: transparent;
+  padding: 8px 0 12px;
+  color: #302820;
+}
+
+.plan-button {
+  margin-top: 40px;
+  padding: 15px 28px;
+  border: 0;
+  background: #d95739;
+  color: white;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: .2s;
+}
+
+.plan-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   DRAFT CARD
+========================= */
+
+.draft-column {
+  padding-top: 5px;
+}
+
+.draft-card {
+  padding: 27px;
+  border: 2px dashed #df5b3d;
+  background: rgba(255, 249, 240, .48);
+  transform: rotate(.7deg);
+}
+
+.draft-top {
+  display: flex;
+  justify-content: space-between;
+  color: #c95338;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .13em;
+}
+
+.draft-card h2 {
+  margin: 26px 0 4px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+}
+
+.draft-card p {
+  margin: 0;
+  color: #6d5c4d;
+}
+
+.divider {
+  border-top: 1px dashed #c9b7a3;
+  margin: 22px 0;
+}
+
+.draft-card small {
+  color: #8b796a;
+}
+
+.total-budget {
+  margin: 4px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 38px;
+  color: #168b82;
+}
+
+.summary-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 25px;
+}
+
+.summary-chips span {
+  padding: 6px 9px;
+  background: #eadbc8;
+  font-size: 11px;
+}
+
+.pace-text {
+  margin-top: 22px;
+  color: #8b6a55;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+/* =========================
+   COMMON SCREEN
+========================= */
+
+.screen {
+  width: min(1180px, 90%);
+  margin: 48px auto 80px;
+}
+
+.screen-title {
+  margin: 0 0 45px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+/* =========================
+   PLAN PAGE
+========================= */
+
+.plan-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid #d3c2ae;
+  padding-bottom: 30px;
+}
+
+.plan-heading h1 {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 54px;
+  font-weight: 500;
+}
+
+.plan-heading h1 span {
+  font-size: .6em;
+}
+
+.day-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.day-buttons button {
+  width: 45px;
+  height: 38px;
+  border: 1px solid #cbb8a4;
+  background: transparent;
+  color: #796655;
+}
+
+.day-buttons button.current {
+  background: #302820;
+  color: #fff;
+  border-color: #302820;
+}
+
+.planner-note {
+  margin: 25px 0;
+  padding: 15px 18px;
+  background: #efe0cb;
+  color: #655447;
+  border-left: 3px solid #d95739;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 55px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 28px 70px 1fr;
+  gap: 13px;
+  align-items: center;
+  min-height: 85px;
+}
+
+.drag {
+  color: #b8a18d;
+  letter-spacing: -4px;
+}
+
+.time {
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  color: #685849;
+}
+
+.activity {
+  padding: 15px 18px;
+  border-left: 4px solid #d95739;
+  background: rgba(255, 250, 242, .65);
+}
+
+.activity-shopping {
+  border-color: #e0aa27;
+}
+
+.activity-food {
+  border-color: #168b82;
+}
+
+.activity-stay {
+  border-color: #8066b5;
+}
+
+.activity-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+}
+
+.activity-title span {
+  margin-left: 10px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #96745d;
+}
+
+.activity-info {
+  margin-top: 5px;
+  color: #7b6859;
+  font-size: 12px;
+}
+
+.travel-time {
+  margin-left: 110px;
+  color: #a28c78;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.gap-box {
+  margin: 15px 0 15px 110px;
+  padding: 13px 15px;
+  border: 1px dashed #c7b19c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #826e5d;
+  font-size: 12px;
+}
+
+.gap-box button {
+  border: 1px solid #c87d64;
+  background: transparent;
+  padding: 7px 12px;
+  color: #a84e36;
+}
+
+.plan-sidebar {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+/* fake map */
+
+.route-map {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background:
+    linear-gradient(30deg, transparent 47%, #d3c5b4 48%, #d3c5b4 49%, transparent 50%),
+    linear-gradient(115deg, transparent 45%, #d3c5b4 46%, #d3c5b4 47%, transparent 48%),
+    #eadfce;
+  border: 1px solid #cdbba6;
+}
+
+.map-road {
+  position: absolute;
+  height: 3px;
+  background: #c3ad96;
+  transform-origin: left;
+}
+
+.road-one {
+  width: 300px;
+  top: 80px;
+  left: 30px;
+  transform: rotate(23deg);
+}
+
+.road-two {
+  width: 310px;
+  top: 220px;
+  left: 30px;
+  transform: rotate(-22deg);
+}
+
+.map-stop,
+.map-hotel {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #d95739;
+  color: white;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.map-hotel {
+  background: #168b82;
+}
+
+.stop-1 { left: 48px; top: 57px; }
+.stop-2 { left: 125px; top: 98px; }
+.stop-3 { left: 190px; top: 140px; }
+.stop-4 { left: 260px; top: 180px; }
+.map-hotel { left: 80px; top: 235px; }
+.stop-6 { right: 50px; bottom: 45px; }
+
+.assumption-card {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #d3c0aa;
+}
+
+.assumption-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.assumption-tags span {
+  padding: 7px 9px;
+  background: #eadbc7;
+  font-size: 11px;
+}
+
+.change-constraint {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #d6c5b1;
+  display: flex;
+  justify-content: space-between;
+  color: #7b6554;
+  font-size: 13px;
+}
+
+.daily-budget {
+  margin-top: 18px;
+  padding: 17px;
+  background: #302820;
+  color: #fff7ec;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.daily-budget strong {
+  color: #f3c747;
+}
+
+/* =========================
+   BUDGET PAGE
+========================= */
+
+.budget-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+}
+
+.budget-panel {
+  padding: 28px;
+  margin-bottom: 25px;
+  border: 1px solid #d2bfaa;
+  background: rgba(255, 249, 240, .42);
+}
+
+.planned-heading {
+  display: flex;
+  justify-content: space-between;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #90735e;
+}
+
+.planned-heading strong {
+  color: #168b82;
+}
+
+.planned-number {
+  margin: 18px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+}
+
+.planned-number small {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: #8a7665;
+}
+
+.budget-bar {
+  height: 25px;
+  display: flex;
+  overflow: hidden;
+  background: #dfd0bd;
+}
+
+.budget-bar .activities {
+  width: 41%;
+  background: #d95739;
+}
+
+.budget-bar .food {
+  width: 24%;
+  background: #168b82;
+}
+
+.budget-bar .transport {
+  width: 35%;
+  background: #d3a632;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 14px;
+  font-size: 11px;
+  color: #776456;
+}
+
+.days-budget {
+  margin-top: 22px;
+}
+
+.budget-day {
+  display: grid;
+  grid-template-columns: 35px 1fr 75px;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.day-bar {
+  height: 12px;
+  background: #e2d4c3;
+}
+
+.bar {
+  height: 100%;
+  background: #168b82;
+}
+
+.bar.warning {
+  background: #d95739;
+}
+
+.day-value {
+  text-align: right;
+}
+
+.budget-warning {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px dashed #c9b5a0;
+  color: #a14c36;
+  font-size: 12px;
+}
+
+.budget-footnote {
+  color: #816e5d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.bookings-title {
+  margin-bottom: 14px;
+}
+
+.bookings {
+  border-top: 1px solid #d1bdA8;
+}
+
+.booking {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #d1bda8;
+}
+
+.booking.cancelled {
+  opacity: .55;
+}
+
+.booking-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: #eadbc8;
+  font-size: 18px;
+}
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.booking-info strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.booking-info span {
+  color: #857261;
+  font-size: 11px;
+}
+
+.booking-price {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-price strong {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.status {
+  padding: 5px 8px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.status.confirmed {
+  background: #dceee7;
+  color: #247a6e;
+}
+
+.status.booked {
+  background: #e5e2ef;
+  color: #67558c;
+}
+
+.status.pending {
+  background: #f5e6b8;
+  color: #936f17;
+}
+
+.status.cancelled {
+  background: #f1d9d1;
+  color: #a14b36;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .setup-content,
+  .plan-grid,
+  .budget-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .draft-column {
+    max-width: 500px;
+  }
+
+  .plan-sidebar {
+    position: static;
+  }
+
+  .navbar nav {
+    gap: 0;
+  }
+
+  .navbar nav button:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .navbar nav button {
+    display: none;
+  }
+
+  .hero,
+  .setup-content,
+  .screen {
+    width: calc(100% - 36px);
+  }
+
+  .hero {
+    margin-top: 38px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .trip-details {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .plan-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .plan-heading h1 {
+    font-size: 43px;
+  }
+
+  .timeline-row {
+    grid-template-columns: 25px 55px 1fr;
+    gap: 7px;
+  }
+
+  .travel-time,
+  .gap-box {
+    margin-left: 87px;
+  }
+
+  .booking {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .booking-price {
+    grid-column: 2;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+/* =========================
+   ALERTS PAGE
+========================= */
+.alerts-screen { padding-top: 8px; }
+.alert-banner {
+  display:flex; align-items:flex-start; gap:14px; padding:16px 18px;
+  background:#ffe0da; border:1.5px solid #e0332a; border-radius:10px;
+}
+.alert-icon { color:#b3271c; font-size:26px; line-height:1; }
+.alert-copy { flex:1; }
+.alert-copy h2 { margin:0; color:#7a1a12; font-family:"Playfair Display",Georgia,serif; font-size:25px; font-weight:500; }
+.alert-copy p { margin:5px 0 0; color:#7a3a34; font-size:13px; line-height:1.5; }
+.decision-badge { background:#e0332a; color:white; border-radius:12px; padding:4px 10px; font-size:11px; white-space:nowrap; }
+.alerts-grid { display:grid; grid-template-columns:1fr 1fr; gap:55px; margin-top:24px; }
+.alert-section-label { margin-bottom:12px; }
+.alert-options { display:flex; flex-direction:column; gap:10px; }
+.alert-option {
+  width:100%; text-align:left; padding:15px; border:1.5px dashed #b99a78; border-radius:10px;
+  background:transparent; color:#302820;
+}
+.alert-option.selected { border:2px solid #c4462c; background:#fff6e8; padding:14px; }
+.alert-option.selected.teal { border-color:#1f8a85; }
+.alert-option.selected.gold { border-color:#efa82a; }
+.alert-option-top { display:flex; justify-content:space-between; gap:10px; align-items:center; }
+.alert-option strong { font-family:"Playfair Display",Georgia,serif; font-size:20px; font-weight:500; }
+.alert-option-top span { font-size:11px; background:#f6cbbe; padding:3px 9px; border-radius:10px; white-space:nowrap; }
+.alert-option p { margin:5px 0 0; color:#7a5f4b; font-size:12px; }
+.alert-impact { margin-top:8px; color:#0b6e63; font-size:12px; }
+.alert-details { background:#fff6e8; border:1px solid #e6d2b4; border-radius:10px; padding:16px; }
+.change-list { display:flex; flex-direction:column; gap:8px; }
+.change-row { display:flex; align-items:center; gap:10px; border-radius:6px; padding:8px 10px; font-size:13px; }
+.change-row span { width:42px; }
+.change-row strong { flex:1; font-weight:500; }
+.change-row small { font-size:11px; }
+.change-row.removed { background:#ffd9d6; color:#9b231b; }
+.change-row.removed strong { text-decoration:line-through; }
+.change-row.added { background:#d5f0e0; color:#175a36; }
+.change-row.moved { background:#ffebb8; color:#7a5300; }
+.impact-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; border-top:1px dashed #b99a78; margin-top:14px; padding-top:12px; }
+.impact-grid div { padding:10px; border-radius:8px; background:#e2f3f1; color:#0b5a54; }
+.impact-grid div:last-child { background:#fbe1a0; color:#6b4a00; }
+.impact-grid small { display:block; font-size:11px; }
+.impact-grid strong { display:block; font-family:"Playfair Display",Georgia,serif; font-size:25px; font-weight:500; margin-top:3px; }
+.alert-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.alert-actions button { padding:10px 15px; border:1.5px solid #33261e; background:transparent; color:#33261e; border-radius:4px; }
+.alert-actions .primary-alert { background:#c4462c; color:white; border-color:#c4462c; }
+.what-if { margin-top:15px; color:#7a5f4b; font-size:13px; }
+.what-if span { color:#1f8a85; margin-right:8px; }
+
+@media (max-width:900px) {
+  .alerts-grid { grid-template-columns:1fr; gap:24px; }
+}
+@media (max-width:650px) {
+  .alert-banner { flex-wrap:wrap; }
+  .alert-copy h2 { font-size:21px; }
+}
+
+/* ================= CHAT + DASHBOARD ================= */
+.chat-panel { max-width: 900px; margin-top: 28px; border: 1px solid #d9cbb9; background: #fffaf2; padding: 24px; }
+.chat-messages { display: flex; flex-direction: column; gap: 14px; min-height: 280px; }
+.chat-message { max-width: 75%; padding: 14px 16px; border-radius: 14px; line-height: 1.5; }
+.chat-message.assistant { align-self: flex-start; background: #e7efe5; }
+.chat-message.user { align-self: flex-end; background: #f2d4c7; }
+.chat-input-row { display: flex; gap: 10px; margin-top: 24px; }
+.chat-input-row input { flex: 1; border: 1px solid #cdbdac; padding: 13px; background: white; }
+.chat-input-row button, .dashboard-actions button { border: 0; background: #302820; color: white; padding: 12px 18px; }
+.dashboard-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+.dashboard-card { background: #fffaf2; border: 1px solid #d9cbb9; padding: 24px; }
+.dashboard-card small { display: block; color: #8b7765; letter-spacing: .08em; margin-bottom: 12px; }
+.dashboard-card strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 30px; }
+.dashboard-card p { color: #6d5d4f; margin-bottom: 0; }
+.dashboard-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+@media (max-width: 700px) { .dashboard-grid { grid-template-columns: 1fr; } .chat-input-row { flex-direction: column; } .chat-message { max-width: 90%; } }
